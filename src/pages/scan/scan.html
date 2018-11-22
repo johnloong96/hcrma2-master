@@ -1,0 +1,36 @@
+<!--
+  Generated template for the ScanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-icon full (click)="back()" name="arrow-back"></ion-icon>
+    <ion-title>Scan</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ng-progress [min]="0" [max]="1"></ng-progress>
+
+  <button ion-button full (click)="selectSource()">Scan Image</button>
+  <button ion-button full (click)="recognizeImage()">Recognize Image</button>
+  <!--<button ion-button full (click)="recognizeImage()" [disabled]="!selectedImage">Recognize Image</button>-->
+  <!--<ion-spinner name="bubbles" [disabled]=""></ion-spinner>-->
+
+  <!--<img [src] = "selectedImage" *ngIf="selectedImage">-->
+
+  <ion-card>
+    <ion-card-header>Image Text</ion-card-header>
+    <ion-card-content>
+      {{ imageText }}
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button full (click)="save()">Save</button>
+</ion-content>
